@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="container">
+                <h2>Password tips</h2>
+                <br>
+                <li>Change your passwords periodically.</li><br>
+                <li>Never use the same password on multiple sensitive accounts.</li><br>
+                <li>Use a password with at least 16 characters. It should contain lowercase letters, uppercase letters, numbers, and symbols</li>
+                <br><li>Refrain from saving your password in a web browser (Firefox, Chrome, Internet Explorer, Safari). Instead, use a tool which manages an encrypted password locker.</li><br>
+                <li>Do not log into sensitive accounts while connected to a public Wi-Fi hotspot.</li><br>
+                <li>Check that you are using a secure (HTTPS, SSH, SFTP) connection before transmitting your password over the web</li><br>
+        </div>
+        <div class="container">
+            <h1>Password Generator</h1>
+            <p>Generate randomized, strong, secure passwords.</p>
+            <div class="main">
+                <div class="password-display" id="password">Your Password Will Appear Here</div>
+                <img src='copy-icon.png' onclick="copyToClipboard()">
+            </div>
+            <br><br>
+            <div class="slider-container">
+                <label for="length">Password Length:</label>
+                <input type="range" id="length" min="6" max="20" value="12">
+                <div class="length-value" id="lengthValue">12</div>
+            </div>
+    
+            <div class="options">
+                <label><input type="checkbox" id="useUpper"> Include Uppercase</label>
+                <label><input type="checkbox" id="useLower"> Include Lowercase</label>
+                <label><input type="checkbox" id="useNumbers"> Include Numbers</label>
+                <label><input type="checkbox" id="useSymbols"> Include Symbols</label>
+            </div>
+    
+            <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+        </div>
+    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+         
